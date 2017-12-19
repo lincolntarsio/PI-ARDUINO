@@ -84,7 +84,7 @@ void loop(){
 
 /// CONTROLE PWM
 
-  pwm = pid + 127;
+  pwm = pid + map(setPoint, 0, 1024, 0, 255);
   
 /// CORREÇÕES PWM
   if(pwm>255){
